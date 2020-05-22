@@ -1,0 +1,52 @@
+<div class="w-100 flex-col jus-center al-center">
+<!--  company form-->
+  <div class=" w-xl-90 w-sm-95 w-xs-95 flex-col jus-start table-container">
+    <h4 class="">{{'company.company' | translate}} {{'label.list'| translate}}</h4>
+    <h5 class="w-100">{{'Btn.New'| translate}} {{'company.company'| translate}}</h5>
+    <form class="w-100 " [formGroup]="Form">
+      <fieldset class="w-100">
+        <div class="w-100 flex-row jus-between wrapped">
+          <div class=" w-lg-30 w-sm-100 w-xs-100 flex-col formEl">
+            <label for="companyName">{{'company.companyName' | translate}}</label>
+            <input type="text" id="companyName"  formControlName="companyName"
+                   [placeholder]=" ('company.companyName' | translate)" class=""  />
+          </div>
+          <div class=" w-lg-30 w-sm-100 w-xs-100 flex-col formEl">
+            <label for="phoneNumber">{{'label.phoneNumber'| translate}}</label>
+            <input type="text" id="phoneNumber" formControlName="phoneNumber"
+                   [placeholder]=" ('label.phoneNumber' | translate)" class="w-100" />
+          </div>
+          <div class=" w-lg-30 w-sm-100 w-xs-100 flex-col formEl">
+            <label for="productType">{{'product.productType'| translate}}</label>
+            <select id="productType" class="w-100" formControlName="product"  >
+              <option *ngFor="let item of companyEnum | enumToArray" [value]="item.key">{{item.value}}</option>
+            </select>
+          </div>
+        </div>
+        <button class="Btn blueBtn " style="margin-top: 10px ; float: right" (click)="OnFormSubmit(Form.value , $event)">{{'Btn.Save' | translate}} </button>
+      </fieldset>
+    </form>
+  </div>
+
+<!--companyList-->
+  <div class="w-xl-90 w-sm-95 w-xs-95 flex-col jus-center al-center" style="overflow-x:auto;" >
+  <div class="  w-100 flex-col al-center jus-center table-container "  >
+      <table>
+        <tr >
+          <th class="w-30 ">{{'company.companyName'| translate }}</th>
+          <th class="w-30">{{'label.phoneNumber'| translate}}</th>
+          <th class="w-30">{{'product.productType'| translate}}</th>
+          <th class="w-10">{{'label.operation' | translate}}</th>
+        </tr>
+        <tr  *ngFor="let item of companies" >
+          <td> {{item.name }}</td>
+          <td>{{item.phoneNumber}}</td>
+          <td> {{companyEnum [item.productType]}}</td>
+          <td>
+            <span  routerLink="/dashboard/product/product-list/{{item.id}}"  class="spanBtn">{{'product.products'| translate}}</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

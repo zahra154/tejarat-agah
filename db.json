@@ -1,0 +1,83 @@
+{
+  "companies": [
+    {
+      "id": "720eeeed-e95c-5d85-d326-932447a4eb4d",
+      "name": "Arj",
+      "phoneNumber": "02152462",
+      "productType": 0
+    },
+    {
+      "id": "c62ac0d5-cf1e-b66e-fc94-7a2cb2ead3fc",
+      "name": "Apple",
+      "phoneNumber": "02152462",
+      "productType": 1,
+      "products": {
+        "companyProducts": []
+      }
+    },
+    {
+      "id": "0164f2df-52c6-7a97-936c-8efb6f1fe065",
+      "name": "Sumsong",
+      "phoneNumber": "02152462",
+      "productType": 1,
+      "products": {
+        "companyProducts": []
+      }
+    },
+    {
+      "id": "0f9a5098-678b-f6c0-f62f-30d775cd7388",
+      "name": "Philips",
+      "phoneNumber": "02152462",
+      "productType": 0
+    },
+    {
+      "id": "5bad493b-7517-3e96-6505-6107932d6e95",
+      "name": "company-test",
+      "phoneNumber": "5444",
+      "productType": "0"
+    },
+    {
+      "id": "23280945-4b1e-2797-1bd2-a6c54d58fc48",
+      "name": "company-test2",
+      "phoneNumber": "25245",
+      "productType": "1"
+    }
+  ],
+  "products": [
+    {
+      "companyId": "720eeeed-e95c-5d85-d326-932447a4eb4d",
+      "id": "25fdcf44-8973-3f03-f36e-e2079587e702",
+      "title": "Refrigerator",
+      "dateOfManufacture": "2020-05-16",
+      "isActive": true
+    },
+    {
+      "companyId": "720eeeed-e95c-5d85-d326-932447a4eb4d",
+      "id": "02a64ba1-612c-835d-9a7c-81f4e0e832d6",
+      "title": "Iron",
+      "dateOfManufacture": "2020-05-16",
+      "isActive": true
+    },
+    {
+      "companyId": "0f9a5098-678b-f6c0-f62f-30d775cd7388",
+      "id": "25fdcf44-8973-3f03-f36e-e2079587e702",
+      "title": "Washing machine",
+      "dateOfManufacture": "2020-05-16",
+      "isActive": true
+    },
+    {
+      "companyId": "0f9a5098-678b-f6c0-f62f-30d775cd7388",
+      "id": "02a64ba1-612c-835d-9a7c-81f4e0e832d6",
+      "title": "Refrigerator",
+      "dateOfManufacture": "2020-05-16",
+      "isActive": true
+    },
+    {
+      "companyId": "5bad493b-7517-3e96-6505-6107932d6e95",
+      "id": "27b015a5-cace-e22d-a187-c9263ee93a8d",
+      "title": "Supplement for junior Suite",
+      "isActive": false,
+      "dateOfManufacture": "2020-05-23"
+    }
+  ]
+}

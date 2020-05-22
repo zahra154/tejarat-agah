@@ -1,0 +1,110 @@
+{
+  "extends": "tslint:recommended",
+  "rulesDirectory": [
+    "codelyzer"
+  ],
+  "rules": {
+
+    "trailing-comma": [false, {"multiline": "always", "singleline": "never"}],
+    "interface-name": [false, "always-prefix"],
+    "indent": false,
+    "no-trailing-whitespace": false,
+    "switch-default": false,
+    "member-access": false,
+    "align": false,
+    "triple-equals": false,
+    "no-empty": false,
+    "max-classes-per-file": false,
+    "one-line": false,
+    // Angular 2
+    "component-class-suffix": true,
+    // "component-selector": [true, "element", "my", "kebab-case"],
+    "directive-class-suffix": true,
+    // "directive-selector": [true, "attribute", "my", "camelCase"],
+    "import-destructuring-spacing": false,
+    "invoke-injectable": true,
+    "no-access-missing-member": true,
+    "no-attribute-decorator": true,
+    "no-forward-ref": true,
+    "no-input-rename": true,
+    "no-output-rename": true,
+    "only-arrow-functions": false,
+    "pipe-naming": [true, "camelCase", "my"],
+    "templates-use-public": true,
+    "no-host-metadata-property": true,
+    "no-inputs-metadata-property": true,
+    "use-lifecycle-interface": true,
+    "no-outputs-metadata-property": true,
+    "use-pipe-transform-interface": true,
+    // General
+    "no-console": [true,
+      "time",
+      "timeEnd",
+      "trace"
+    ],
+    "no-debugger": false,
+    "whitespace": false,
+    "no-consecutive-blank-lines": false,
+    "max-line-length": [
+      false,
+      120
+    ],
+    "no-string-literal": false,
+    "no-use-before-declare": true,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ],
+    "variable-name": [
+      true,
+      "allow-leading-underscore",
+      "allow-pascal-case",
+      "ban-keywords",
+      "check-format"
+    ],
+    "comment-format": false,
+
+
+
+
+    "array-type": false,
+    "arrow-parens": false,
+    "deprecation": {
+      "severity": "warn"
+    },
+    "import-blacklist": [
+      true,
+      "rxjs/Rx"
+    ],
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "static-field",
+          "instance-field",
+          "static-method",
+          "instance-method"
+        ]
+      }
+    ],
+
+    "no-inferrable-types": [
+      true,
+      "ignore-params"
+    ],
+    "no-non-null-assertion": true,
+    "no-redundant-jsdoc": true,
+    "no-switch-case-fall-through": true,
+    "no-var-requires": false,
+    "object-literal-key-quotes": [
+      true,
+      "as-needed"
+    ],
+
+
+    "no-output-on-prefix": true
+  }
+}

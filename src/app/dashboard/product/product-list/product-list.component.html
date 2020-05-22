@@ -1,0 +1,68 @@
+
+<div class="w-100 flex-col jus-center al-center">
+
+  <div class=" w-xl-90 w-sm-95 w-xs-95 flex-col jus-start table-container">
+    <h4 class="">{{'product.product' | translate}} {{'label.list'| translate}}</h4>
+    <h5 class="w-100">{{'Btn.New'| translate}} {{'product.product'| translate}}</h5>
+    <form class="w-100 " [formGroup]="Form">
+      <fieldset class="w-100">
+        <div class="w-100 flex-row jus-between wrapped">
+          <div class=" w-lg-30 w-sm-100 flex-col formEl">
+            <label for="company">{{'company.company'| translate}}</label>
+            <select id="company" class="" formControlName="company" disabled >
+              <option *ngFor="let item of companies" [value]="item.id">{{item.name}}</option>
+            </select>
+          </div>
+
+          <div class=" w-lg-30 w-sm-100 flex-col formEl">
+            <label for="title">{{'product.product' | translate}} {{'label.title' | translate}}</label>
+            <input type="text" id="title"  formControlName="title"
+                   [placeholder]=" (('product.product' | translate) &&  ('label.title' | translate))" class=""  />
+          </div>
+          <div class=" w-lg-30 w-sm-100 flex-col formEl">
+            <label for="dateOfManufacture">{{'label.dateOfManufacture'| translate}}</label>
+            <input type="date" id="dateOfManufacture" formControlName="dateOfManufacture"
+                   [placeholder]=" ('label.dateOfManufacture' | translate)" class="" />
+          </div>
+          <div class=" w-lg-30 w-sm-100 flex-col formEl">
+            <label for="status">{{'label.status'| translate}}</label>
+            <div class="radio" id="status">
+              <input id="first" type="radio" formControlName="status" [value]="true">
+              <label for="first">{{'label.active'| translate}}</label>
+              <input id="second" type="radio" formControlName="status" [value]="false">
+              <label for="second">{{'label.inactive'|translate}}</label>
+            </div>
+          </div>
+
+        </div>
+        <button class="Btn blueBtn " style="margin-top: 10px ; float: right" (click)="OnFormSubmit(Form.value , $event)">{{'Btn.Save' | translate}} </button>
+      </fieldset>
+    </form>
+  </div>
+<!--product table-->
+  <div class="w-100 flex-col al-center ">
+    <div class="w-xl-90 w-sm-95 w-xs-95 table-container" style="overflow-x:auto;" >
+      <h4>{{'product.products'| translate}}</h4>
+      <div  class=" w-100 flex-col al-center jus-center "  style="overflow-x:auto;">
+        <table>
+          <tr >
+            <th class="w-30 ">{{'label.title'| translate }}</th>
+            <th class="w-30">{{'label.dateOfManufacture'| translate}}</th>
+            <th class="w-30">{{'label.status'| translate}}</th>
+          </tr>
+          <tr  *ngFor="let item of products" >
+            <td> {{item.title }}</td>
+            <td>{{item.dateOfManufacture }}</td>
+            <td>
+              <span *ngIf="item.isActive" class="activity"  style="background: #4f904e">{{'label.active'| translate}}</span>
+              <span *ngIf="!item.isActive" class="activity" style="background: #e75c5c;">{{'label.inactive'| translate}}</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

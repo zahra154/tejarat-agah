@@ -1,0 +1,47 @@
+{
+  "HEADER": {
+    "dashboardTitel": "Dashboard",
+    "invoices": "Invoice",
+    "login": "Login",
+    "changeLng": "change language",
+    "enLng": "english",
+    "faLng": "farsi"
+
+  },
+  "label": {
+    "new": "New",
+    "logout": "Logout",
+    "status": "Status",
+    "panel": "Company Panel",
+    "list": "List",
+    "phoneNumber": "PhoneNumber",
+    "title": "Title",
+    "dateOfManufacture": "Date Of Manufacture",
+    "active": "Active",
+    "inactive": "Inactive",
+    "operation": "Operation"
+  },
+
+  "product": {
+    "product": "Product",
+    "products": "Products",
+    "productType": "product Type"
+  },
+
+  "company": {
+    "company": "Company",
+    "companyName": "Company Name"
+  },
+
+  "Btn": {
+    "Cancel": "Cancel",
+    "Save": "Save",
+    "Edit": "Edit",
+    "Delete": "Delete",
+    "New": "Create",
+    "Send": "Send",
+    "Submit": "Submit",
+    "Reject": "Reject",
+    "Accept": "Accept"
+  }
+}

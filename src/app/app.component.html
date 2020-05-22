@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<header [class.rtl]="('dir' | translate) === 'rtl'" *ngIf="!headerFooterDisable">
+  <app-header></app-header>
+</header>
+
+<main [class.rtl]="('dir' | translate) === 'rtl'" >
+  <router-outlet> </router-outlet>
+</main>
+
+<footer [class.rtl]="('dir' | translate) === 'rtl'" *ngIf="!headerFooterDisable">
+  <app-footer ></app-footer>
+</footer>
+

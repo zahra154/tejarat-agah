@@ -1,0 +1,64 @@
+
+//this is the number of our grid system's columns(and rows). IT CAN BE A COMPOSITE OF 100 (100%this != 0),
+// BUT IN THAT CASE, WE WILL USE IT'S FLOOR FOR CLASS NAMES.
+$columnNumber: 20;
+$secondaryColumnNumber: 3;
+@mixin columnWidthGenerator($ind, $num){
+	width: 1% * $ind*(100/$num);
+	min-width:  1% * $ind*(100/$num);
+}
+@mixin rowHeightGenerator($ind, $num){
+	height: 1% * $ind*(100/$num);
+	min-height:  1% * $ind*(100/$num);
+}
+
+//font
+@mixin font($size, $weight, $height){
+	font-size: $size+px;
+	font-weight: $weight;
+	line-height: $height + px;
+}
+
+
+//-------------------------------------------------
+
+//colors
+
+$blue: #03a9f4;
+$darkBlue: #00869d;
+$green: #2a6b04;;
+$lightGreen: #6bc733;
+$lightGreen2: #eef8ff;
+$white: #ffffff;
+$yellow:#ffc021;
+$red:#EB5B3F;
+$disable:#afbab9;
+$gray:#cecaca;
+
+$border1: #ced2d2;
+$border2: #cccccc;
+$border3: rgba(0, 0, 0, 0.063);
+
+$accentcolor: #fcae2c;
+$lightcolor: #fff;
+$darkcolor: #444;
+
+$textColor1: #5F6766;
+$textColor2: #3B3C3C;
+$textColor3: #aaaaaa;
+$textColor4: #fefefe;
+$textColor5: #ababab;
+$textColor6: #feffff;
+$textColor7: #999999;
+$textColor8: #eeeeee;
+
+$footerBg: #676767;
+$formBg: #dee5df;
+$lightBlue:#dbf0ff;
+$grayBack:#f9f9f9;
+$background:#f2f2f2;
+$background2:#2c3e4e;
+$orange:#e67e22;;
+
+
+$cardShadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.1);

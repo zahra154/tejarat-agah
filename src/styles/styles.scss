@@ -1,0 +1,607 @@
+/* this file will be extracted to main dist folder and is imported in index.html */
+/* This file is for setting global styles  */
+@import 'variables';
+
+
+//---------------------------------------------------------------------------
+// fontfaces:
+
+
+//-----------------------------------------------------------------------------------------
+
+// (responsive) width and height and container and display classes:
+
+@for $i from 1 through $columnNumber {
+  .w-#{$i*floor(100/$columnNumber)} {
+    @include columnWidthGenerator($i, $columnNumber)
+  }
+}
+@for $i from 1 through $secondaryColumnNumber {
+  .w-#{$i*floor(100/$secondaryColumnNumber)} {
+    @include columnWidthGenerator($i, $secondaryColumnNumber)
+  }
+}
+
+
+@for $i from 1 through $columnNumber {
+  .h-#{$i*floor(100/$columnNumber)} {
+    @include rowHeightGenerator($i, $columnNumber)
+  }
+}
+@for $i from 1 through $secondaryColumnNumber {
+  .h-#{$i*floor(100/$secondaryColumnNumber)} {
+    @include rowHeightGenerator($i, $secondaryColumnNumber)
+  }
+}
+
+@media screen and (max-width: 480px){
+  .hidden-xs{
+    display: none !important;
+  }
+  .container{
+    width: 100%;
+  }
+
+  @for $i from 1 through $columnNumber {
+    .w-xs-#{$i*floor(100/$columnNumber)} {
+      @include columnWidthGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .w-xs-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include columnWidthGenerator($i, $secondaryColumnNumber)
+    }
+  }
+
+
+  @for $i from 1 through $columnNumber {
+    .h-xs-#{$i*floor(100/$columnNumber)} {
+      @include rowHeightGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .h-xs-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include rowHeightGenerator($i, $secondaryColumnNumber)
+    }
+  }
+}
+@media screen and (min-width: 481px){
+
+  .container{
+    width: 100%;
+  }
+
+  @for $i from 1 through $columnNumber {
+    .w-sm-#{$i*floor(100/$columnNumber)} {
+      @include columnWidthGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .w-sm-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include columnWidthGenerator($i, $secondaryColumnNumber)
+    }
+  }
+
+
+  @for $i from 1 through $columnNumber {
+    .h-sm-#{$i*floor(100/$columnNumber)} {
+      @include rowHeightGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .h-sm-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include rowHeightGenerator($i, $secondaryColumnNumber)
+    }
+  }
+}
+@media screen and (min-width: 769px){
+  .container{
+    width: 768px;
+  }
+
+  @for $i from 1 through $columnNumber {
+    .w-md-#{$i*floor(100/$columnNumber)} {
+      @include columnWidthGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .w-md-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include columnWidthGenerator($i, $secondaryColumnNumber)
+    }
+  }
+
+
+  @for $i from 1 through $columnNumber {
+    .h-md-#{$i*floor(100/$columnNumber)} {
+      @include rowHeightGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .h-md-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include rowHeightGenerator($i, $secondaryColumnNumber)
+    }
+  }
+}
+@media screen and (min-width: 981px){
+  .container{
+    width: 980px;
+  }
+
+  @for $i from 1 through $columnNumber {
+    .w-lg-#{$i*floor(100/$columnNumber)} {
+      @include columnWidthGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .w-lg-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include columnWidthGenerator($i, $secondaryColumnNumber)
+    }
+  }
+
+
+  @for $i from 1 through $columnNumber {
+    .h-lg-#{$i*floor(100/$columnNumber)} {
+      @include rowHeightGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .h-lg-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include rowHeightGenerator($i, $secondaryColumnNumber)
+    }
+  }
+}
+@media screen and (min-width: 1201px) {
+  .container{
+    width: 1200px;
+  }
+
+  @for $i from 1 through $columnNumber {
+    .w-xl-#{$i*floor(100/$columnNumber)} {
+      @include columnWidthGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .w-xl-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include columnWidthGenerator($i, $secondaryColumnNumber)
+    }
+  }
+
+
+  @for $i from 1 through $columnNumber {
+    .h-xl-#{$i*floor(100/$columnNumber)} {
+      @include rowHeightGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .h-xl-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include rowHeightGenerator($i, $secondaryColumnNumber)
+    }
+  }
+}
+//@media screen and (min-width: 1441px) {
+//	.hidden-xxl{
+//		display: none !important;
+//	}
+//	.container{
+//		width: 1440px;
+//	}
+//
+//	@for $i from 1 through $columnNumber {
+//		.w-xxl-#{$i*floor(100/$columnNumber)} {
+//			@include columnWidthGenerator($i, $columnNumber)
+//		}
+//	}
+//	@for $i from 1 through $secondaryColumnNumber {
+//		.w-xxl-#{$i*floor(100/$secondaryColumnNumber)} {
+//			@include columnWidthGenerator($i, $secondaryColumnNumber)
+//		}
+//	}
+//
+//
+//	@for $i from 1 through $columnNumber {
+//		.h-xxl-#{$i*floor(100/$columnNumber)} {
+//			@include rowHeightGenerator($i, $columnNumber)
+//		}
+//	}
+//	@for $i from 1 through $secondaryColumnNumber {
+//		.h-xxl-#{$i*floor(100/$secondaryColumnNumber)} {
+//			@include rowHeightGenerator($i, $secondaryColumnNumber)
+//		}
+//	}
+//}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+  .hidden-sm{
+    display: none !important;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 980px){
+
+  .hidden-md{
+    display: none !important;
+  }
+}
+@media screen and (min-width: 981px) and (max-width: 1200px){
+
+  .hidden-lg{
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1201px){
+
+  .hidden-xl{
+    display: none !important;
+  }
+}
+
+
+
+// end of (responsive) width and height and container and display classes ^
+
+//-----------------------------------------------------------------------------------------
+
+// layout options:
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+}
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+}
+.jus-start{
+  justify-content: flex-start;
+}
+.jus-center{
+  justify-content: center;
+}
+.jus-end{
+  justify-content: flex-end;
+}
+.jus-between{
+  justify-content: space-between;
+}
+.jus-around{
+  justify-content: space-around;
+}
+.al-center{
+  align-items: center;
+}
+.al-start{
+  align-items: flex-start;
+}
+.al-end{
+  align-items: flex-end;
+}
+.al-between{
+  align-items: stretch;
+}
+.wrapped{
+  flex-wrap: wrap;
+}
+
+// end of layout options^
+
+//-----------------------------------------------------------------------
+
+// global styles
+
+html {
+  height: 100%;
+}
+body {
+  font-family: IRANSans, Helvetica, sans-serif;
+  margin: 0;
+}
+
+* {
+  line-height: 1.1em;
+  box-sizing: border-box;
+}
+
+input, textarea, select, button{
+  font-family: IRANSans, Helvetica, sans-serif;
+}
+
+button{
+  border: none;
+}
+
+input:focus, button:focus, textarea:focus {
+  outline:none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+fieldset {
+  display: block;
+  margin:0;
+  padding:0;
+  border: none;
+}
+
+.container{
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.whiteBtn{
+  background-color: transparent;
+  border: 1px solid rgba(255,255,255,0.8);
+
+}
+
+.Btn{
+  border-radius: 1.2em;
+  font-size: 0.85rem;
+  color: $textColor4;
+  padding: 0.85em 2em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.blueBtn {
+  background-color: $blue;
+  border: 1px solid $blue;
+}
+
+.lightBlueBtn{
+  background-color: $white;
+  border: 1px solid $blue;
+}
+
+.greenBtn{
+  background-color: $green;
+  //border: 1px solid rgba(255,255,255,0.8);
+}
+.grayBtn{
+  background-color: $textColor3;
+  //border: 1px solid rgba(255,255,255,0.8)
+}
+
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .basicInput{
+    border-radius: 5px;
+    background-color: $white;
+    border: 1px solid $border1;
+    color: $textColor1;
+    padding: 15px 40px;
+    @include font(13,400,20);
+    &::placeholder {
+      @include font(16, 400, 20);
+      color: $border1;
+    }
+  }
+}
+
+@supports not (-webkit-overflow-scrolling: touch) {
+  .basicInput{
+    border-radius: 5px;
+    background-color: $white;
+    border: 1px solid $border1;
+    color: $textColor1;
+    padding: 15px 20px;
+    @include font(18,400,20);
+    &::placeholder {
+      @include font(16, 400, 20);
+      color: $border1;
+    }
+  }
+}
+.closeIcon{
+  cursor: pointer;
+  @include font(25 , 500, 25);
+  color: $textColor1;
+  position: absolute;
+  margin:5px;
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1)
+  }
+  50% {
+    -webkit-transform: rotate(180deg) scale(.6);
+    transform: rotate(180deg) scale(.6)
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+    transform: rotate(360deg) scale(1)
+  }
+}
+
+
+// form
+form {
+  label{
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: #72777a;
+    letter-spacing: 0.2px;
+
+  }
+  input {
+    border: 1px solid #ced4da;
+    padding: 5px;
+    color: #495057;
+    font-size: 0.85rem;
+    letter-spacing:normal;
+    line-height:1.5;
+    border-radius: .25rem;
+    &::placeholder{
+      font-size: 0.85rem;
+      color: #929597;
+    }
+  }
+
+  select{
+    border: 1px solid #ced4da;
+    padding: 5px;
+    color: #495057;
+    font-size: 0.85rem;
+    letter-spacing:normal;
+    line-height:1.5;
+    border-radius: .25rem;
+    option{
+      font-size: 0.85rem;
+    }
+  }
+.formEl{
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+}
+
+// table
+table {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Segoe UI;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  color: #72777a;
+  letter-spacing: .2px;
+  overflow-x: hidden;
+  margin: 30px 0;
+  th{
+    font-size: 14px;
+    letter-spacing: .2px;
+    border-collapse: collapse;
+    vertical-align: bottom;
+    font-weight: 700;
+    border-bottom: 2px solid #e9ecef;
+
+  }
+  th, td {
+    text-align: left;
+    padding: 12px;
+    line-height: 1.3;
+    vertical-align: text-top;
+    border: 1px solid #e9ecef;
+  }
+  tr:nth-child(even){
+    background-color: rgba(0,0,0,.05)
+  }
+}
+
+
+.spanBtn {
+  color: $darkBlue;
+  width: 100px;
+  cursor: pointer;
+}
+
+.table-container{
+  margin-top: 20px;
+  margin-bottom: 50px;
+  background-color: white;
+  padding: 17px 7px 20px 9px;
+  -webkit-box-shadow: -3px 1px 10px 2px rgba(199,199,199,1);
+  -moz-box-shadow: -3px 1px 10px 2px rgba(199,199,199,1);
+  box-shadow: -3px 1px 10px 2px rgba(199,199,199,1);
+}
+
+.modalParent{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  .modalBack{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .modalContainer{
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    padding: 15px 0;
+    .modal{
+      pointer-events: all;
+      overflow-y: auto;
+      // overflow-x: hidden;
+      //display: block;
+    }
+  }
+}
+
+/* Custom radio buttons */
+input[type="radio"] + label {
+  margin-top: 5px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  margin-right: 15px;
+  font-size: 13px;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin-right: 14px;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+}
+
+input[type="radio"] {
+  display: none !important;
+  *display: inline;
+  &:checked + label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #2196f3;
+  }
+} // End Custom radio buttons
+ *[disabled] {
+   background-color: #e4e4e4;
+   cursor: not-allowed;
+ }

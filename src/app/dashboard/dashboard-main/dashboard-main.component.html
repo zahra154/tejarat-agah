@@ -1,0 +1,30 @@
+<div class="flex-row al-center jus-center w-100  con-ba">
+  <div class="row w-100 jus-center al-start">
+    <div class="col w-xl-20  w-lg-25 w-md-30 hidden-sm hidden-xs jus-center al-start">
+      <div class=" w-100 flex-col al-center jus-start dashboard-navbar ">
+        <div class=" w-100 flex-row al-center jus-center">
+          <div class=" w-100 ">
+            <nav class="w-100 flex-col al-center jus-start">
+              <ul class="main-menu w-100 flex-col jus-start">
+                <li class="w-100 flex-col al-start jus-center  main-menu-li"  >
+                  <a class="w-100 flex-row al-center jus-start"   routerLink="company/company-list"   routerLinkActive="active">
+                    <span class="w-70 flex-row al-center jus-start">
+                        <i class="fa fa-hotel" style="color:#ee7853;"></i>
+                    <span>{{'company.company'| translate}}  </span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="col w-xl-80 w-lg-75  w-md-70 w-sm-100 w-xs-100  dashboardCon h-100 ">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+
+</div>
+
+

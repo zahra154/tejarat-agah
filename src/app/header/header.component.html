@@ -1,0 +1,51 @@
+<div class="flex-row al-center jus-center w-100 header">
+  <div class="w-100 flex-row al-center jus-center headerCon">
+      <div class="w-100 al-center jus-end flex-row">
+        <div class=" w-xl-20  w-lg-25 w-md-30 w-sm-30 w-xs-35 flex-row al-center jus-start logo-container">
+          <img src="../../assets/img/logo.PNG" alt="rad logo" width="50px"  >
+          <span class="hidden-xl hidden-lg hidden-md" (click)="SlideMenu(true)" >
+            <i  [ngClass]="{'fa fa-bars': !slideMenuIsOpen, 'fa-remove': slideMenuIsOpen}" class="menuIcon"></i></span>
+          <span class=" hidden-sm hidden-xs">{{'label.panel' | translate}}</span>
+        </div>
+       <div class="w-xl-80 w-lg-75  w-md-70   w-sm-70 w-xs-65 flex-row al-center jus-end" >
+          <div class="w-xl-20 w-lg-25 w-md-35 w-sm-55 w-xs-100 flex-row al-center jus-start profile-con"
+               style=" direction: rtl; padding: 0 15px">
+            <span class="flex-col al-end jus-start">
+              <small >{{adminTxt}} <span>|</span> <a class="logoutLink" >{{'label.logout' | translate}}</a></small>
+            </span>
+            <span class="img-con">
+              <img src="../../assets/img/avatar.jpg" alt="avatar image" width="32px">
+           </span>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="modalParent hidden-xl hidden-lg hidden-md" *ngIf="slideMenuIsOpen" [@fadeAnimation]>
+  <div class="modalBack" (click)="SlideMenu(false)"></div>
+</div>
+
+<div class="sliderMenu flex-col al-start jus-start w-sm-50 w-xs-75 h-100 hidden-xl hidden-lg  hidden-md"
+     [ngClass]="{'open': slideMenuIsOpen}">
+  <div class=" w-100 flex-col al-center jus-start dashboard-navbar">
+    <div class=" w-100 flex-row al-center jus-start logo-container">
+      <img src="../../assets/img/logo.PNG" alt="rad logo" width="50px"  >
+      <span class="">{{'label.panel' | translate}}</span>
+    </div>
+    <div class=" w-100 flex-row al-center jus-center">
+      <div class=" w-100 ">
+        <nav class="w-100 flex-col al-center jus-start">
+          <ul class="main-menu w-100">
+            <li class="w-100  main-menu-li">
+              <a class="w-100 flex-row al-center jus-start" routerLink="dashboard/company/company-list">
+                        <i class="fa fa-hotel" style="color:#ee7853;"></i>
+                        <span>{{'company.company'| translate}}  </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

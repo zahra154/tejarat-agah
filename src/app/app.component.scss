@@ -1,0 +1,14 @@
+@import "../styles/variables";
+
+:host {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main{
+  flex: 1;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}

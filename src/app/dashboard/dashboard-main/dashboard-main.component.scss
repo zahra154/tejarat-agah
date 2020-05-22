@@ -1,0 +1,78 @@
+@import '../../../styles/variables';
+
+:host {
+  //margin-top: 40px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.row{
+  width: 100%;
+  height:auto;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row;
+}
+
+.col {
+  min-height: 100vh;
+  width:33%;
+   flex: 1 1 100%;
+}
+
+
+
+
+main{
+  background: white;
+  flex: 1;
+}
+.con-ba{
+  background-color: white;
+  //padding-top: 20px;
+  min-height: 100vh;
+}
+.main-menu{
+  list-style: none;
+  padding: 0;
+  font-weight: 600;
+  font-size: 15px;
+  white-space: nowrap;
+  .main-menu-li{
+    margin: 2px 0;
+    padding: 5px;
+  //  box-shadow: 0px 4px 6px #e0d9d9;
+    a{
+      padding: 10px;
+      text-decoration: none;
+      color: #72777a!important;
+      i{
+        font-size: 25px;
+        color: $orange;
+        margin-right: 10px;
+      }
+      span{
+        padding: 0 8px;
+        &:hover{
+          color: #343739;
+          cursor: pointer;
+
+        }
+      }
+    }
+  }
+}
+
+
+.dashboardCon{
+  background-color:#f9fafb ;
+  border-left: 1px solid $border3;
+  padding-top: 10px;
+}
+.active{
+  color: #343739;
+}
+
