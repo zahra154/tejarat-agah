@@ -1,0 +1,62 @@
+.container{
+  direction: rtl;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+.progressbar{
+  position: relative;
+  z-index: 2;
+  li{
+    list-style-type: none;
+    width: 16.66%;
+    float: right;
+    text-align: center;
+    position: relative;
+    &:before{
+      content: attr(data-before);
+      text-align: center;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border:1px solid #ddd;
+      display: block;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      background-color: white;
+    }
+    &:after{
+      content: '';
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      top:15px;
+      right: -50%;
+      background-color: #dddddd;
+      z-index: -1;
+    }
+    &:first-child{
+      &:after{
+        content: '';
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top:15px;
+        right: -27%;
+        background-color: #dddddd;
+        z-index: -1;
+      }
+    }
+  }
+  li.active{
+      color: green;
+      &:before{
+        border-color: green;
+        position: relative;
+      }
+  }
+}
+.progressbar   li.active + li:after{
+  z-index: -1;
+  background-color: green;
+}

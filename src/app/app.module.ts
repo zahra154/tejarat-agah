@@ -17,6 +17,8 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import { NoContentComponent } from './no-content/no-content.component';
 import {PipeModule} from './Pipes/pipe.module';
 import {AppInterceptorService} from '../Services/app-interceptor.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 
@@ -49,6 +51,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserAnimationsModule,
     ReactiveFormsModule,
     PipeModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     RestService,

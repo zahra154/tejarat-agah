@@ -41,6 +41,12 @@
       "name": "company-test2",
       "phoneNumber": "25245",
       "productType": "1"
+    },
+    {
+      "id": "9e78b506-39a6-3337-be27-b20a720f021c",
+      "name": "company-test3",
+      "phoneNumber": "4444",
+      "productType": "1"
     }
   ],
   "products": [
@@ -78,6 +84,13 @@
       "title": "Supplement for junior Suite",
       "isActive": false,
       "dateOfManufacture": "2020-05-23"
+    },
+    {
+      "companyId": "9e78b506-39a6-3337-be27-b20a720f021c",
+      "id": "b9cd0358-ef76-6a89-c934-90387398560b",
+      "title": "Pre Night",
+      "isActive": true,
+      "dateOfManufacture": "2020-05-06"
     }
   ]
 }

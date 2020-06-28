@@ -1,0 +1,5 @@
+<div class=" container  ">
+<ul class="progressbar" >
+  <li *ngFor="let item of list; let $index = index" [ngClass]="{'active' : currentIndex >= $index}"  [attr.data-before]="[$index+1]">{{item.title}}</li>
+</ul>
+</div>

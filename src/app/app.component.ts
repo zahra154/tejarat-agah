@@ -5,8 +5,8 @@ import {Config} from './app.config';
 import {RestService} from '../Services/rest.service';
 import {NavigationEnd, Router} from '@angular/router';
 import {Subscription} from 'rxjs';
+import {SwUpdate} from '@angular/service-worker';
 
-import { Guid } from 'guid-typescript';
 
 export const LSSharedLanguage = {
   language:'chosenLanguage'
@@ -27,7 +27,14 @@ export class AppComponent implements  OnInit , OnDestroy{
   constructor(private _service: RestService ,
               private  http: HttpClient ,
               translate: TranslateService ,
+              private update: SwUpdate,
               private router: Router){
+    update.available.subscribe(event => {
+      console.warn(event);
+      update.activateUpdate().then( () => {
+        document.location.reload();
+      });
+    });
     this.isRtl = Config.langs.defaultLang.rtl;
     if (window.location.href.includes('http://invoice.radoffice.net')) {
       _service.developOption('Release');
